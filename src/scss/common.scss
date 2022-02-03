@@ -1,1 +1,25 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.button {
+    display: inline-block;
+    font-family: Raleway;
+    font-weight: 800;
+    font-size: rem(10);
+    line-height: math.div(12,10);
+    letter-spacing: 0.14em;
+    color: #FCFDFE;
+    padding: rem(14) rem(30);
+    background-color: $accentColor;
+    border-radius: rem(5);
+    &:hover {
+        background-color: #ec5862da;
+    }
+
+    // .button_blue
+    &_blue {
+        background-color: #4285F4;
+        &:hover {
+            background-color: #4286f4de;
+        }
+    }
+}

@@ -1,12 +1,144 @@
 //====================================================================================================
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 55;
+	min-width: $minWidth+px;
+	
+
+    // .header__container
+    &__container {
+        display: flex;
+        min-height: rem(117);
+        align-items: center;
+		@media (max-width:$tablet) {
+			min-height: rem(80);
+		}
+		
+    }
+
+    // .header__logo
+
+    &__logo {
+        padding-right: rem(15);
+		@media (max-width:$mobileSmall){
+			width: rem(40);
+			overflow: hidden;
+
+		}
+		@media (max-width:$tablet){
+			position: relative;
+			z-index: 56;
+		}
+    }
+
+    // .header__menu
+
+    &__menu {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    // .header__button-wrapper
+
+    &__button-wrapper {
+        flex-grow: 0;
+        flex-shrink: 0;
+        @include adaptiveValue("flex-basis", 252, 100, 1152, 600);
+        display: flex;
+        justify-content: flex-end;
+		align-items: center;
+		@media (max-width:$tablet){
+			position: relative;
+			z-index: 56;
+		}
+    }
+
+    // .header__button
+
+    &__button {
+		margin-right: rem(15);
+    }
+}
+.menu {
+
+	// .menu__body
+	&__body {
+		@media (max-width:$tablet) {
+			position: fixed;
+			left: -100%;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow-y: auto;
+			background-color: #fff;
+			padding: rem(80) rem(15) rem(30) rem(15);
+			transition: left 0.3s ease 0s;
+			.menu-open & {
+				left: 0;
+			}
+			&::after {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: rem(80);
+				background-color: #fff;
+			}
+		}	
+	}
+
+    // .menu__list
+    &__list {
+        display: flex;
+		@media (max-width:$tablet) {
+			flex-direction: column;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}	
+    }
+
+    // .menu__item
+
+    &__item {
+        @include adaptiveValue("margin-right", 40, 15);
+		@media (max-width:$tablet) {
+			margin: 0 0 rem(30) 0;
+		}
+    }
+
+    // .menu__link
+
+    &__link {
+        font-family: Raleway;
+        font-weight: 700;
+        font-size: rem(10);
+        line-height: math.div(12,10);
+        letter-spacing: 0.14em;
+        color: #000;
+		transition: color 0.3s ease 0s;
+		&:hover {
+			color: $accentColor;
+		}
+		@media (max-width:$tablet) {
+			color: $mainColor;
+			font-size: rem(15);
+		}
+    }
+}
 
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
 		width: 30px;
@@ -48,4 +180,4 @@
 		}
 	}
 }
-*/
+
