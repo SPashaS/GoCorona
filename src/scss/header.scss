@@ -13,7 +13,7 @@
         display: flex;
         min-height: rem(117);
         align-items: center;
-		@media (max-width:$tablet) {
+		@media (max-width:$mobile) {
 			min-height: rem(80);
 		}
 		
@@ -28,7 +28,7 @@
 			overflow: hidden;
 
 		}
-		@media (max-width:$tablet){
+		@media (max-width:$mobile){
 			position: relative;
 			z-index: 56;
 		}
@@ -47,11 +47,11 @@
     &__button-wrapper {
         flex-grow: 0;
         flex-shrink: 0;
-        @include adaptiveValue("flex-basis", 252, 100, 1152, 600);
+        @include adaptiveValue("flex-basis", 252, 152, 1087, 768);
         display: flex;
         justify-content: flex-end;
 		align-items: center;
-		@media (max-width:$tablet){
+		@media (max-width:$mobile){
 			position: relative;
 			z-index: 56;
 		}
@@ -60,14 +60,16 @@
     // .header__button
 
     &__button {
-		margin-right: rem(15);
+		@media (max-width:$mobile){
+			margin-right: rem(15); 
+		}
     }
 }
 .menu {
 
 	// .menu__body
 	&__body {
-		@media (max-width:$tablet) {
+		@media (max-width:$mobile) {
 			position: fixed;
 			left: -100%;
 			top: 0;
@@ -80,7 +82,7 @@
 			.menu-open & {
 				left: 0;
 			}
-			&::after {
+			.menu-open &::after {
 				content: "";
 				position: fixed;
 				top: 0;
@@ -95,7 +97,7 @@
     // .menu__list
     &__list {
         display: flex;
-		@media (max-width:$tablet) {
+		@media (max-width:$mobile) {
 			flex-direction: column;
 			display: flex;
 			justify-content: center;
@@ -107,7 +109,7 @@
 
     &__item {
         @include adaptiveValue("margin-right", 40, 15);
-		@media (max-width:$tablet) {
+		@media (max-width:$mobile) {
 			margin: 0 0 rem(30) 0;
 		}
     }
@@ -125,7 +127,7 @@
 		&:hover {
 			color: $accentColor;
 		}
-		@media (max-width:$tablet) {
+		@media (max-width:$mobile) {
 			color: $mainColor;
 			font-size: rem(15);
 		}
@@ -138,7 +140,7 @@
 
 .icon-menu {
 	display: none;
-	@media (max-width: $tablet) {
+	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
 		width: 30px;

@@ -6,8 +6,35 @@
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page">
-				start
+			<main class="main">
+				<section class="main__get-started get-started">
+					<div class="get-started__container">
+						<div class="get-started__content">
+							<div class="get-started__block-text block-text">
+								<h1 class="block-text__title block-text__title_blue">Take care of yours family’s <span>health.</span></h1>
+								<p class="block-text__text">All in one destination for COVID-19 health queries.  
+									Consult 10,000+ health workers about your concerns.</p>
+								<a href="" class="block-text__button button">GET STARTED</a>
+							</div>
+						</div>
+						<div class="get-started__image">
+							<div class="get-started__image-ibg">
+								<img src="@img/get-started/image.svg" alt="Doctor">
+							</div>
+						</div>
+						<div class="get-started__video">
+							<a href="#" class="video-get-started">
+								<div class="video-get-started__icon">
+									<img src="@img/get-started/play.svg" alt="Play">
+								</div>
+								<div class="video-get-started__body">
+									<p class="video-get-started__title">Stay safe with GoCorona</p>
+									<p class="video-get-started__text">Watch Video</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
