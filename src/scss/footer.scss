@@ -1,3 +1,32 @@
 //====================================================================================================
+.footer {
+    @include adaptiveValue("padding-top",45,15);
+    @include adaptiveValue("padding-bottom",45,15);
+    // .footer__container
+
+    &__container {
+        
+    }
+
+    // .footer__items
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        @include adaptiveValue("gap",55,15);
+    }
+
+    // .footer__item
+
+    &__item {
+    }
+
+    // .footer__link
+
+    &__link {
+    }
+}
 
 //====================================================================================================
