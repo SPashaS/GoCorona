@@ -10,6 +10,13 @@
 
     &__stay-safe {
     }
+ // .main__experts
+    &__experts {
+    }
+// .main__healthcare
+    &__healthcare {
+    }
+
 }
 
 .get-started {
@@ -249,5 +256,123 @@
 
 
 //====================================================================================================
+.experts {
+    background-color: #FAFBFD;
+    @include adaptiveValue("padding-top",105,30);
+    @include adaptiveValue("padding-bottom",115,30);
+    // .experts__container
+    &__container {
+    }
+    // .experts__statistic
+    &__statistic {
+    }
+    // .experts__body
+    &__body {
+    }
+}
+
+
+
+.statistic-experts {
+        max-width: rem(654);
+        margin: 0 auto;
+        position: relative;
+        @include adaptiveValue("margin-bottom",80,30);
+    // .statistic-experts__body
+
+    &__body {
+        background: #FFFFFF;
+        box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+        border-radius: rem(16);
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    // .statistic-experts__decor
+
+    &__decor {
+        background-color: $accentColor;
+        border-radius: 30px;
+        position: absolute;
+        // .statistic-experts__decor_1
+
+        &_1 {
+            top: rem(60);
+            left: rem(-30);
+            transform: rotate(-30deg);
+            width: rem(65);
+            height: rem(65);
+            border-radius: rem(16);
+        }
+
+        // .statistic-experts__decor_2
+
+        &_2 {
+            top: rem(-50);
+            left: 40%;
+            transform: rotate(105deg);
+            width: rem(96);
+            height: rem(96);
+        }
+
+        // .statistic-experts__decor_3
+
+        &_3 {
+            top: rem(-25);
+            right: rem(-75);
+            transform: rotate(-30deg);
+            width: rem(127);
+            height: rem(127);
+        }
+    }
+}
+
+.body-statistic-experts {
+        
+    // .body-statistic-experts__list
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(15);
+        align-items: center;
+        padding: rem(28) rem(80);
+        @media (max-width:$tablet){
+            flex-wrap: wrap;
+        }
+        @media (max-width:$mobile){
+            flex-direction: column;
+            padding: rem(20) rem(10); 
+        }
+    }
+
+    // .body-statistic-experts__item
+
+    &__item {
+        text-align: center;
+    }
+
+    // .body-statistic-experts__value
+
+    &__value {
+        font-weight: 700;
+        font-size: rem(36);
+        line-height: math.div(43,36);
+        letter-spacing: 0.14em;
+        color: $accentColor;
+    }
+
+    // .body-statistic-experts__title
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(11);
+        line-height: math.div(13,11);
+        letter-spacing: 0.37em;
+        text-transform: uppercase;
+        color: #000;
+    }
+}
 
 //====================================================================================================
