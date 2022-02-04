@@ -62,3 +62,25 @@
     &__button {
     }
 }
+
+.decor {
+    position: absolute;
+    border-radius: rem(30);
+    width: rem(77);
+    height: rem(77);
+    background-color: $accentColor;
+    // .decor_1
+    &_1 {
+
+    }
+
+    // .decor_2
+    &_2 {
+
+    }
+
+    // .decor_3
+    &_3 {
+
+    }
+}
