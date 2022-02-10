@@ -885,10 +885,11 @@ h6 {
 }
 .video__poster {
   position: absolute;
-  background: url("../img/experts/poster.jpg") 40% 50%/64% 82% no-repeat #fff;
+  background: #fff url("../img/experts/poster.jpg") 40% 50%/cover no-repeat;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  background-size: 64% 82%;
 }
 .video__button {
   position: absolute;
