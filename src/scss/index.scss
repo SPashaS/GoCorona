@@ -379,24 +379,62 @@
 
     &__video {
         flex: 0 1 50%;
-        padding: 0px 0px percent(284,1057) 0px;
-        position: relative;
-        @media (max-width:$mobile){
-            padding: 0px 0px percent(284,521) 0px;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
+    }
+}
+//====================================================================================================
+
+.video {
+    padding: 0 rem(7) percent(284,521) 0;
+    position: relative;
+    border-radius: rem(8);
+    overflow: hidden;
+    box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+    @media (max-width:$mobile) {
+        padding-right: 0;
+    }
+    &__poster {
+        position: absolute;
+        background: #fff url('@img/experts/poster.jpg') 40% 50% / cover no-repeat ;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-size: 64% 82%;
+    }
+    &__button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 43%;
+        width: rem(40);
+        height: rem(40);
+        border-radius: 50%;
+        background-color: #587EEC;
+        &::after {
             position: absolute;
-            object-fit: cover;
-            top: 0;
-            left: 0;
-            box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
-            border-radius: 8px;
+            top: rem(14);
+            left: rem(16);
+            content:'';
+            display: block;
+            border-top: rem(6) solid transparent;
+            border-left: rem(10) solid #fff;
+            border-bottom: rem(6) solid transparent;
         }
+        &:hover {
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+        }
+    }
+    video {
+        position: absolute;
+        background: #fff url('@img/experts/poster.jpg') 40% 50% / cover no-repeat ;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-size: 64% 82%;
     }
 }
 
+
+//====================================================================================================
 //====================================================================================================
 
 .healthcare {
@@ -534,6 +572,3 @@
         }
     }
 }
-//====================================================================================================
-
-
